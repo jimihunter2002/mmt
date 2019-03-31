@@ -1,17 +1,26 @@
-To run the tests in this project follow the instructions below
+#MMT Digital
 
-1. `git clone repo`
+##To run the tests in this project follow the instructions below
 
-2. install `node` on your machine if its not installed
+<dl>
+    <dt>1. Clone repo with command below</dt>
+    <dd>`git clone repo`</dd>
 
-3. Install Cypress
-run the command below  in the root of the project folder
-`npm install`
+    <dt>2. Install node</dt>
+    <dd>Install `node` on your machine if its not installed</dd>
 
-4. Add appropriate credentials to env section of the `cypress.json` file
+    <dt>3. Install Cypress and other dependencies</dt>
+    <dd>Run the command `npm install` in the root of the project folder</dd>
 
-5. Replace the pdf fileName on line 6 in jobApplication.js file with desired pdf file and the file to the folder `fixtures`
+    <dt>4. Add credentials</dt>
+    <dd>Add appropriate credentials to env section of the `cypress.json` file.</dd>
 
-6. Open cypress app by running: npm run e2e
-
-7. Click on the `jobApplication.js` test file and watch cypress do its magic.
+    <dt>5. Replace pdf file</dt>
+    <dd>Replace the pdf fileName on line 6 in jobApplication.js file with desired pdf file and the file to the folder `fixtures`.</dd>
+    
+    <dt>6. Run Cypress app</dt>
+    <dd> Open cypress app by running: npm run e2e.</dd>
+    
+    <dt>7. Run test in a browser</dt>
+    <dd> Click on the `jobApplication.js` test file and watch cypress do its magic.</dd>
+</dl>
