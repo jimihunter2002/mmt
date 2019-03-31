@@ -1,6 +1,6 @@
-#MMT Digital
+# MMT Digital
 
-##To run the tests in this project follow the instructions below
+## To run the tests in this project follow the instructions below
 
 <dl>
     <dt>1. Clone repo with command below</dt>
