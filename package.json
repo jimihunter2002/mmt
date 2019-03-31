@@ -1,0 +1,19 @@
+{
+  "name": "mmt",
+  "version": "1.0.0",
+  "description": "mmt digital test",
+  "main": "mmt_home.spec.js",
+  "scripts": {
+    "test": "test",
+    "e2e": "cypress open"
+  },
+  "author": "Yusuf Ogunjimi",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "3.1.5",
+    "cypress-file-upload": "^3.0.5"
+  },
+  "dependencies": {
+    "chance": "^1.0.18"
+  }
+}

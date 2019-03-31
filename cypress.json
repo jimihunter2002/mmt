@@ -1,0 +1,12 @@
+{
+    "baseUrl" : "https://mmtdigital.co.uk",
+
+    "env" : {
+        "firstName": "XXXX",
+        "lastName": "XXXXXX",
+        "email": "XXXXXXXX@mmtdigital.co.uk",
+        "phone": "XXXX-XXXX-XXX"
+    },
+
+    "chromeWebSecurity" : false
+}

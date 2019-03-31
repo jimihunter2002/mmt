@@ -1,0 +1,5 @@
+node_modules
+.vscode
+admin.json
+package-lock.json
+*.pdf
