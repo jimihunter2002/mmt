@@ -93,7 +93,8 @@ class ApplicationForm extends CareersPage {
         this.getResumeModal().should('be.hidden').invoke('show').should('be.visible');
         this.getResumeFilePicker().focus();
         const fileInput = 'input[class=js-resume-picker]';
-        cy.upload_file(fileName, fileType, fileInput);
+        cy.upload_file(fileName, fileType, fileInput)
+        cy.wait(5000);
     }
 
     addCoverLetter(letter) {

@@ -39,7 +39,7 @@ import { method } from "bluebird";
                 const dataTransfer = new DataTransfer();
                 dataTransfer.items.add(testFile);
                 el.files = dataTransfer.files;
-                cy.wrap(subject).trigger('change', { force: true })
+                cy.wrap(subject).trigger('change', { force: true });
             });
     });
 });
