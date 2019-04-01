@@ -4,7 +4,7 @@
 
 <dl>
     <dt>1. Clone repo with command below</dt>
-    <dd>`git clone repo`</dd>
+    <dd>`git clone "git@github.com:jimihunter2002/mmt.git" or "https://github.com/jimihunter2002/mmt.git"`</dd>
     <dt>2. Install node</dt>
     <dd>Install `node` on your machine if its not installed</dd>
     <dt>3. Install Cypress and other dependencies</dt>
