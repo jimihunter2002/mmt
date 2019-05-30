@@ -1,3 +1,9 @@
+const LATEST_OPPORTUNITIES = '.maxed-width > h2';
+const LOCATION_TOGGLE = '.select-toggle';
+const APPLY_BUTTON = '#Apply-Btn';
+const LOCATION_MAIN_OPTION = '#select-option';
+const LONDON_LOCATION = `#LndOp > a`;
+
 class CareersPage {
     visit() {
         cy.visit('/careers');
@@ -8,34 +14,45 @@ class CareersPage {
     }
 
     scrollIntoViewLatestOpportunities() {
-        cy.get('.maxed-width > h2').first().scrollIntoView()
+        cy.get(LATEST_OPPORTUNITIES).first().scrollIntoView()
     }
 
     getLocationSelectToggle() {
-        return cy.get('.select-toggle');
+        return cy.get(LOCATION_TOGGLE);
     }
 
     getApplyButton() {
-        return cy.get('#Apply-Btn');
+        return cy.get(APPLY_BUTTON);
     }
 
-    clickOnAJobToApply(title, location) {
-        title = title.toLowerCase()
-        let jobTitle = title.replace(/ /g, '-')
-        cy.get(`a[href="/careers/${jobTitle}"]`).click();
-        cy.get('#select-option').first().scrollIntoView();
+    clickOnAJobToApply(jobName, page) {
+        jobName = jobName.toLowerCase()
+        page = page.toLowerCase();
+        let jobTitle = jobName.replace(/ /g, '-')
+        cy.get(`a[href="/${page}/${jobTitle}"]`).click();
+        cy.get(LOCATION_MAIN_OPTION).first().scrollIntoView();
+    }
+
+    selectLocationAndApply(location) {
         this.getLocationSelectToggle().click();
-        if (location === 'London') {
-            cy.get('#LndOp > a').click();
-        }
+        this.selectLocation(location);
         this.getApplyButton().click();
 
-        
-       
     }
 
     getFormUrl() {
         return this.url();
+    }
+
+    selectLocation(location) {
+        switch (location) {
+            case 'London':
+                cy.get(LONDON_LOCATION).click();
+                break;
+            default:
+                cy.log(`${location} is not available for selection`);
+
+        }
     }
 }
 

@@ -1,5 +1,8 @@
 {
     "compilerOptions": {
+        "paths": {
+            "*": ["types/*"]
+        },
         "allowJs": true,
         "baseUrl": "../node_modules",
         "types": [
@@ -7,6 +10,6 @@
         ]
     },
     "include": [
-        "**/*.*"
+        "**/*.ts"
     ]
 }
